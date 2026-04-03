@@ -3,10 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Shivam Kumar | Modern Portfolio</title>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <nav>
+        <div class="logo">SK<span class="gradient-text">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+        <a href="mailto:skshivam1910@gmail.com" class="btn btn-outline" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">Let's Talk</a>
+    </nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content reveal">
+                <h1>Crafting Digital <br><span class="gradient-text">Experiences</span>.</h1>
+                <p>I’m an ECE undergraduate passionate about software engineering, full-stack development, and problem solving. Skilled in the MERN stack and actively practicing Data Structures & Algorithms, I enjoy building scalable web applications and exploring IoT-driven solutions. </p>
+                <div class="hero-actions">
+                    <a href="https://github.com/shivamkumar1910/Projects" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">View Projects</a>
+                    <a href="./assets/Tech_resume.pdf" download="Shivam_Kumar_Resume.pdf" class="btn btn-outline">Download Resume</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper reveal">
+                <div class="floating-badge badge-1">
+                    ✨ 5+ Years Exp
+                </div>
+                <!-- Profile Image Generated -->
+                <img src="assets/PP photo.png" alt="John Doe" class="profile-img">
+                <div class="floating-badge badge-2">
+                    🚀 50+ Projects
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Skills Section -->
+        <section id="about" class="about-grid">
+            <div class="about-text reveal">
+                <h2 class="section-title" style="text-align: left;">About <span class="gradient-text">Me</span></h2>
+                <p>I blend creative design with technical problem-solving to deliver robust frontend and backend solutions. My journey started building simple websites, and today I develop complex web apps with millions of interactions.</p>
+                <p>When I'm not coding, you can find me exploring new design trends or contributing to open source.</p>
+            </div>
+            <div class="skills-box reveal">
+                <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">Core Technologies</h3>
+                <div class="skills-container">
+                    <span class="skill-tag">MERN Stack</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">DSA</span>
+                    <span class="skill-tag">IOT</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Operating System</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">System Design</span>
+                    <span class="skill-tag">Object Oriented Programming</span>
+                    <span class="skill-tag">Javascript</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title reveal">Featured <span class="gradient-text">Work</span></h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal">
+                    <div class="img-wrapper">
+                        <img src="assets/project1.png" alt="Project 1" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Nexus Dashboard</h3>
+                        <p>A high-performance modern dark mode dashboard featuring elegant data visualization and real-time analytics tracking.</p>
+                        <div class="project-links">
+                            <a href="#">Live Demo ↗</a>
+                            <a href="#">GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal">
+                    <div class="img-wrapper">
+                        <img src="assets/project2.png" alt="Project 2" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Aura E-Commerce</h3>
+                        <p>A sleek, vibrant mobile e-commerce platform with seamless floating cart mechanics and rich interactions.</p>
+                        <div class="project-links">
+                            <a href="#">Live Demo ↗</a>
+                            <a href="#">GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shivam Kumar. Designed & Built with ❤️</p>
+    </footer>
+
+    <!-- Reveal on Scroll Script -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger on load
+        reveal();
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

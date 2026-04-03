@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogMonkey - Modern Blog</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Blog Project.css">
+    <link rel="shortcut icon" href="./assets/monkey.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">BlogMonkey.</a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Topics</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <button class="btn">Subscribe</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <h1>Discover modern <span>ideas</span> <br>for developers.</h1>
+        <p>A beautifully curated destination for thoughtful writing on design, technology, coding, and the modern web ecosystem.</p>
+        <button class="btn" style="padding: 14px 36px; font-size: 1.1rem; border-radius: 10px;">Start Reading</button>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="container main-layout">
+        
+        <!-- Main Content Area (Blog Posts) -->
+        <main>
+            <!-- Featured Post -->
+            <article class="post-card">
+                <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80');"></div>
+                <div class="post-content">
+                    <span class="category">Technology</span>
+                    <h2 class="post-title"><a href="#">The Future of Web Development: AI and Beyond in 2024</a></h2>
+                    <p class="post-excerpt">Explore the latest trends, transformative frameworks, and cutting-edge methodologies that are rapidly reshaping the future of front-end and back-end application development.</p>
+                    <div class="post-meta">
+                        <div class="author-avatar" style="background-image: url('https://i.pravatar.cc/100?img=11'); background-size: cover;"></div>
+                        <div class="author-info">
+                            <span class="author-name">Alex Johnson</span>
+                            <span>Oct 12, 2023 • 8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Standard Post -->
+            <article class="post-card">
+                <div class="post-image smaller" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <span class="category">Design</span>
+                    <h2 class="post-title"><a href="#">Essential UI/UX Principles Every Developer Must Know</a></h2>
+                    <p class="post-excerpt">Understanding core design principles can drastically improve the aesthetic quality and usability of the applications you build day to day.</p>
+                    <div class="post-meta">
+                        <div class="author-avatar" style="background-image: url('https://i.pravatar.cc/100?img=5'); background-size: cover;"></div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Miller</span>
+                            <span>Oct 10, 2023 • 5 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Standard Post -->
+            <article class="post-card">
+                <div class="post-image smaller" style="background-image: url('https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="post-content">
+                    <span class="category">Lifestyle</span>
+                    <h2 class="post-title"><a href="#">Balancing Work and Life as a Remote Developer</a></h2>
+                    <p class="post-excerpt">Actionable tips and proven strategies for maintaining high productivity while working from home, without accidentally burning out.</p>
+                    <div class="post-meta">
+                        <div class="author-avatar" style="background-image: url('https://i.pravatar.cc/100?img=8'); background-size: cover;"></div>
+                        <div class="author-info">
+                            <span class="author-name">David Chen</span>
+                            <span>Oct 08, 2023 • 6 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Search Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Search</h3>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search articles...">
+                    <button class="btn">Go</button>
+                </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Categories</h3>
+                <ul class="widget-list">
+                    <li><a href="#">Technology <span>12</span></a></li>
+                    <li><a href="#">Design <span>8</span></a></li>
+                    <li><a href="#">Lifestyle <span>5</span></a></li>
+                    <li><a href="#">Tutorials <span>15</span></a></li>
+                    <li><a href="#">Career <span>7</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Widget -->
+            <div class="sidebar-widget newsletter-widget">
+                <h3 class="widget-title">Newsletter</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">Get the latest articles and insights delivered directly to your inbox weekly.</p>
+                <input type="email" class="search-input" placeholder="Your email address" style="margin-bottom: 12px;">
+                <button class="btn" style="width: 100%;">Subscribe Now</button>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h2 class="logo" style="color: white; margin-bottom: 16px;">BlogMonkey.</h2>
+                <p>A modern, beautifully crafted space for developers, designers, and creators to share their stories and technical ideas with the world.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Latest Articles</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Write for Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Legal & Privacy</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 BlogMonkey. Designed with modern web standards. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
